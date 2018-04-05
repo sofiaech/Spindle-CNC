@@ -1,0 +1,137 @@
+(begin at program 0, 0, 0)
+
+  (Start in the center )
+  G00 Z15.0		(RAPID TRAVERSE TO 15MM ABOVE Z0)
+  (Drill 5mm down)
+  G01 z-5
+    // cut right 4mm (we have then 1mm overlap with the 5mm slot tool)
+    G01 Y4
+    (Cut a circle)
+    G05 X4 Y0
+    G05 X0 Y-4
+    G05 X-4 Y0
+    G05 X0 Y4
+    (Repeat until large circle is complete)
+    G01 Y8
+    G05 X8 Y0
+    G05 X0 Y-8
+    G05 X-8 Y0
+    G05 X0 Y8
+
+    G01 Y12
+    G05 X12 Y0
+    G05 X0 Y-12
+    G05 X-12 Y0
+    G05 X0 Y12
+
+    G01 Y16
+    G05 X16 Y0
+    G05 X0 Y-16
+    G05 X-16 Y0
+    G05 X0 Y16
+
+    G01 Y20
+    G05 X20 Y0
+    G05 X0 Y-20
+    G05 X-20 Y0
+    G05 X0 Y20
+
+    G01 Y24
+    G05 X24 Y0
+    G05 X0 Y-24
+    G05 X-8 Y0
+    G05 X0 Y24
+
+    G01 Y28
+    G05 X28 Y0
+    G05 X0 Y-28
+    G05 X-28 Y0
+    G05 X0 Y28
+
+    G01 Y32
+    G05 X32 Y0
+    G05 X0 Y-32
+    G05 X-32 Y0
+    G05 X0 Y32
+
+    G01 Y35.6
+    G05 X35.6 Y0
+    G05 X0 Y-35.6
+    G05 X-35.6 Y0
+    G05 X0 Y35.6
+    (Repeat until at proper depth)    (Drill down to appropriate cutting depth)
+  G00 z-4     (Move tool 1mm above surface)
+  G00 Y0      (Rapid traverse to center)
+  G01 z-9.53
+    // cut right 4mm (we have then 1mm overlap with the 5mm slot tool)
+    G01 Y4
+    (Cut a circle)
+    G05 X4 Y0
+    G05 X0 Y-4
+    G05 X-4 Y0
+    G05 X0 Y4
+    (Repeat until large circle is complete)
+    G01 Y8
+    G05 X8 Y0
+    G05 X0 Y-8
+    G05 X-8 Y0
+    G05 X0 Y8
+
+    G01 Y12
+    G05 X12 Y0
+    G05 X0 Y-12
+    G05 X-12 Y0
+    G05 X0 Y12
+
+    G01 Y16
+    G05 X16 Y0
+    G05 X0 Y-16
+    G05 X-16 Y0
+    G05 X0 Y16
+
+    G01 Y20
+    G05 X20 Y0
+    G05 X0 Y-20
+    G05 X-20 Y0
+    G05 X0 Y20
+
+    G01 Y24
+    G05 X24 Y0
+    G05 X0 Y-24
+    G05 X-8 Y0
+    G05 X0 Y24
+
+    G01 Y28
+    G05 X28 Y0
+    G05 X0 Y-28
+    G05 X-28 Y0
+    G05 X0 Y28
+
+    G01 Y32
+    G05 X32 Y0
+    G05 X0 Y-32
+    G05 X-32 Y0
+    G05 X0 Y32
+
+    G01 Y35.6
+    G05 X35.6 Y0
+    G05 X0 Y-35.6
+    G05 X-35.6 Y0
+    G05 X0 Y35.6
+    (Repeat until at proper depth) (Drill to final depth)
+  G00 z-8     (raise tool)
+  G00 Y0      (Move tool to center)
+  G01 Z-12.7  (Using the same process as above cut the smaller inner circle)
+    G01 Y4
+    G05 X4 Y0
+    G05 X0 Y-4
+    G05 X-4 Y0
+    G05 X0 Y4
+
+    G01 Y7.03
+    G05 X7.03 Y0
+    G05 X0 Y-7.03
+    G05 X-7.03 Y0
+    G05 X0 Y7.03
+  G00 Z5      (raise tool)
+  G00 Y(Move tool to outer radius, then cut full radius to specified depth 5mm at a time)
