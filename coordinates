@@ -134,4 +134,16 @@
     G05 X-7.03 Y0
     G05 X0 Y7.03
   G00 Z5      (raise tool)
-  G00 Y(Move tool to outer radius, then cut full radius to specified depth 5mm at a time)
+  G00 Y46.95  (Move tool to outer radius, then cut full radius to specified depth 5mm at a time)
+  G01 Z-5
+    G05 X46.95 Y0
+    G05 X0 Y-46.95
+    G05 X-46.95 Y-46.95
+  G01 Z-10
+    G05 X46.95 Y0
+    G05 X0 Y-46.95
+    G05 X-46.95 Y-46.95
+  G01 Z-12.7
+    G05 X46.95 Y0
+    G05 X0 Y-46.95
+    G05 X-46.95 Y-46.95
